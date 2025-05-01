@@ -33,11 +33,27 @@ tabuleiro[1][5] = 3;
 tabuleiro[1][6] = 3;
 tabuleiro[1][7] = 3;
 
+//VAIRAVEIS A SEREM USADAS PARA OS NAVIOS DIAGONAIS
+int x, y;
+
+//Navio DIAGONAL superior Esquerda para Inferior Direita
+for (int x = y = 0; x < 3; x++, y++)
+{
+    tabuleiro[x][y] = 3;
+}
+
+// Navio DIAGONAL Inferior Esquerda para Superior Direita
+for (int x = 9; x > 6; x--, y++)
+{
+    tabuleiro[x][y] = 3;
+}
+
 printf(" %d ", tabuleiro[i][j]); //imprimindo o tabuleiro
 }
     printf("\n"); //Essa quebra de linha é para separar a linha do tabuleiro
 }
 
+printf("\n");
 
 
 return 0;
